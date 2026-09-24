@@ -1,6 +1,7 @@
 import logging
-import httpx
+import os
 from typing import Dict, Any, Optional
+from google import genai
 from backend.config import GEMINI_API_KEY
 
 logger = logging.getLogger(__name__)
@@ -46,13 +47,14 @@ class ExplanationService:
             safety_stock=safety_stock
         )
 
-        if not self.api_key:
+        effective_key = self.api_key or os.environ.get("GEMINI_API_KEY", "").strip()
+        if not effective_key:
             return {
                 "text": template_text,
                 "source": "template"
             }
 
-        # Attempt LLM call
+        # Attempt LLM call using google-genai SDK
         try:
             llm_text = self._call_gemini(
                 phc_name=phc_name,
@@ -73,7 +75,7 @@ class ExplanationService:
                     "source": "llm"
                 }
         except Exception as e:
-            logger.warning(f"Gemini API explanation request failed: {e}. Falling back to template.")
+            logger.warning(f"Google GenAI SDK explanation request failed: {e}. Falling back to template.")
 
         return {
             "text": template_text,
@@ -140,9 +142,7 @@ class ExplanationService:
         incoming_total: int,
         outgoing_total: int
     ) -> Optional[str]:
-        """Calls Google Gemini API with strict factual grounding."""
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={self.api_key}"
-
+        """Calls Google Gemini API using google-genai SDK with strict factual grounding."""
         prompt = (
             "You are a public health logistics commander in India. "
             "Write a concise, professional 2-3 sentence situational briefing for health administrators. "
@@ -158,29 +158,16 @@ class ExplanationService:
             f"- Outgoing Transfers: {outgoing_total} units total. Details: {outgoing}\n"
         )
 
-        payload = {
-            "contents": [
-                {
-                    "parts": [{"text": prompt}]
-                }
-            ],
-            "generationConfig": {
-                "temperature": 0.2,
-                "maxOutputTokens": 180
-            }
-        }
+        api_key = self.api_key or os.environ.get("GEMINI_API_KEY", "").strip()
+        if not api_key:
+            return None
 
-        with httpx.Client(timeout=5.0) as client:
-            resp = client.post(url, json=payload)
-            if resp.status_code == 200:
-                data = resp.json()
-                candidates = data.get("candidates", [])
-                if candidates:
-                    parts = candidates[0].get("content", {}).get("parts", [])
-                    if parts:
-                        text = parts[0].get("text", "").strip()
-                        if text:
-                            return text
-            else:
-                logger.warning(f"Gemini API returned status {resp.status_code}: {resp.text}")
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=prompt
+        )
+
+        if response and response.text:
+            return response.text.strip()
         return None
