@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHC Supply Resilience — Rural Healthcare Redistribution Engine</title>
+  <meta name="description" content="Predictive stockout warning system and constrained linear redistribution engine for rural Primary Health Centres during public health emergencies.">
+
+  <!-- Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       FUNCTION 1: CONTEXT SELECTOR & PERSISTENT BREADCRUMB CAPSULE
+       ========================================================================== -->
+  <header class="capsule-strip-wrapper">
+    <div class="context-capsule" id="contextCapsuleTrigger" title="Press '/' or click to search and change State, District, PHC, Medicine, or Emergency Alert">
+      <div class="capsule-brand">
+        <span class="brand-dot"></span>
+        <span>PHC Supply Resilience</span>
+      </div>
+
+      <div class="capsule-crumbs" id="capsuleBreadcrumbs">
+        <span class="crumb-val">Odisha</span>
+        <span class="crumb-sep">›</span>
+        <span class="crumb-tag">Dist:</span> <span class="crumb-val">Kalahandi</span>
+        <span class="crumb-sep">›</span>
+        <span class="crumb-tag">PHC:</span> <span class="crumb-val">Thuamul Rampur</span>
+        <span class="crumb-sep">›</span>
+        <span class="crumb-tag">Med:</span> <span class="crumb-val">ORS & Zinc</span>
+        <span class="crumb-sep">›</span>
+        <span class="crumb-tag">Alert:</span> <span class="crumb-val" style="color: var(--accent-clay);">Monsoon Flooding</span>
+      </div>
+
+      <span class="capsule-shortcut">/</span>
+
+      <div class="system-status-indicator" id="systemStatusPill">
+        <span class="status-pulsing-dot"></span>
+        <span>Connecting...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Application Body -->
+  <main class="app-container orchestrated-content">
+
+    <!-- ==========================================================================
+         FUNCTION 5: EMERGENCY / ANOMALY ALERT BANNER & AFFECTED MATRIX
+         ========================================================================== -->
+    <section class="alert-banner-container" id="section-alert">
+      <div class="alert-banner" id="alertBannerCard">
+        <div class="alert-content-left">
+          <div class="alert-icon-ring">⚠</div>
+          <div>
+            <div class="alert-text-headline">Operational Anomaly Surveillance</div>
+            <div class="alert-text-body" id="alertBannerText">
+              Evaluating live demand surge signals across rural supply networks...
+            </div>
+          </div>
+        </div>
+        <div style="flex-shrink: 0;">
+          <span class="provenance-badge badge-computed">Live Computed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP SECTION: Stockout Risk Gauge (Func 3) & Plain-Language Explanation (Func 8) -->
+    <section class="grid-top-summary" id="section-overview">
+      
+      <!-- FUNCTION 3: STOCKOUT RISK GAUGE & RUNWAY COUNTERS -->
+      <article class="resilience-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <h2>Stockout Vulnerability</h2>
+            <div class="card-subtitle">Real-time depletion forecast for active health centre</div>
+          </div>
+          <span class="provenance-badge badge-computed">Live Computed</span>
+        </div>
+
+        <div class="gauge-content-wrapper">
+          <div class="gauge-canvas-container">
+            <canvas id="riskGaugeCanvas"></canvas>
+            <div class="gauge-center-stat">
+              <div>
+                <span class="gauge-score-value tabular-nums" id="riskScoreValue">--</span>
+                <span class="gauge-score-symbol">%</span>
+              </div>
+              <div class="gauge-risk-badge Caution" id="riskLevelBadge">Calculating...</div>
+            </div>
+          </div>
+
+          <div class="gauge-runway-row">
+            <div class="runway-item">
+              <div class="runway-label">Stock Runway</div>
+              <div class="runway-val tabular-nums"><span id="daysToStockoutValue">--</span> <span style="font-size: 0.95rem; font-weight: 500; color: var(--ink-muted);">days</span></div>
+            </div>
+            <div style="width: 1px; height: 32px; background: var(--border-light);"></div>
+            <div class="runway-item">
+              <div class="runway-label">Emergency Multiplier</div>
+              <div class="runway-val tabular-nums"><span id="surgeMultiplierDisplay">2.9</span><span style="font-size: 0.95rem; font-weight: 500; color: var(--ink-muted);">x</span></div>
+            </div>
+            <div style="width: 1px; height: 32px; background: var(--border-light);"></div>
+            <div class="runway-item">
+              <div class="runway-label">Dispatch Status</div>
+              <div class="runway-val" style="font-size: 1.15rem; color: var(--accent-brass-hover); font-weight: 700;">Rebalancing</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- FUNCTION 8: PLAIN-LANGUAGE EXPLANATION (LLM / GROUNDED FALLBACK) & AFFECTED MATRIX -->
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <article class="resilience-card explanation-card">
+          <div class="card-header-row">
+            <div class="card-title-group">
+              <h3>Logistics Situational Briefing</h3>
+              <div class="card-subtitle">Plain-language operational synthesis for regional health directors</div>
+            </div>
+            <span class="provenance-badge badge-computed">Live Computed</span>
+          </div>
+
+          <div class="explanation-body" id="explanationTextBody">
+            Synthesizing risk assessment and redistribution trade-offs...
+          </div>
+
+          <div class="explanation-footer">
+            <span id="explanationSourceBadge" class="provenance-badge badge-source-llm">Server LLM Synthesis (Gemini)</span>
+          </div>
+        </article>
+
+        <!-- Affected Districts Table (Part of Func 5) -->
+        <article class="resilience-card" style="padding: 18px 20px; flex: 1;">
+          <div class="card-header-row" style="margin-bottom: 12px;">
+            <div class="card-title-group">
+              <h3>Districts Under Emergency Surge</h3>
+              <div class="card-subtitle">Sub-regions with active cluster notifications</div>
+            </div>
+            <span class="provenance-badge badge-computed">Live Computed</span>
+          </div>
+
+          <div class="resilience-table-wrapper" style="max-height: 180px;">
+            <table class="resilience-table">
+              <thead>
+                <tr>
+                  <th>District</th>
+                  <th>Medicines Affected</th>
+                  <th>Alert Level</th>
+                </tr>
+              </thead>
+              <tbody id="affectedDistrictsTableBody">
+                <tr>
+                  <td colspan="3" style="text-align: center; color: var(--ink-muted); padding: 14px;">Loading alert signals...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FUNCTION 6: LEAFLET SPATIAL MAP WITH RISK MARKERS
+         ========================================================================== -->
+    <section class="map-card-wrapper" id="section-map">
+      <article class="resilience-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <h2>Geospatial Health Network</h2>
+            <div class="card-subtitle">District Primary Health Centres color-coded by stockout vulnerability. Click any marker to focus context.</div>
+          </div>
+          <span class="provenance-badge badge-computed">Live Computed</span>
+        </div>
+
+        <div id="mapContainer"></div>
+
+        <div class="map-legend-bar">
+          <div class="legend-items-group">
+            <div class="legend-chip">
+              <span class="legend-chip-dot" style="background-color: var(--risk-secure);"></span>
+              <span>Secure (&lt;35% Risk)</span>
+            </div>
+            <div class="legend-chip">
+              <span class="legend-chip-dot" style="background-color: var(--risk-caution);"></span>
+              <span>Caution (35–69% Risk)</span>
+            </div>
+            <div class="legend-chip">
+              <span class="legend-chip-dot" style="background-color: var(--risk-critical);"></span>
+              <span>Critical (≥70% Imminent Stockout)</span>
+            </div>
+          </div>
+          <div style="font-size: 0.78rem; font-style: italic;">
+            Interactive: Click any centre marker to rebalance dashboard focus.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==========================================================================
+         FUNCTION 2: DEMAND FORECAST & FUNCTION 4: RISK DRIVERS
+         ========================================================================== -->
+    <section class="grid-analytics-two-col" id="section-forecast">
+      
+      <!-- FUNCTION 2: DEMAND FORECAST LINE CHART -->
+      <article class="resilience-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <h2>Temporal Demand Forecast</h2>
+            <div class="card-subtitle">Past weekly consumption (solid) vs surge forecast (dashed) with 95% confidence envelope</div>
+          </div>
+          <span class="provenance-badge badge-synthetic">Model Benchmark / Synthetic Sample Data until CSV upload</span>
+        </div>
+
+        <div class="chart-container-wrapper">
+          <canvas id="forecastChartCanvas"></canvas>
+        </div>
+      </article>
+
+      <!-- FUNCTION 4: RISK DRIVERS HORIZONTAL BAR CHART -->
+      <article class="resilience-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <h2>Risk Factor Attribution</h2>
+            <div class="card-subtitle">Top operational drivers contributing to current stockout vulnerability</div>
+          </div>
+          <span class="provenance-badge badge-synthetic">Model Benchmark / Synthetic Sample Data until CSV upload</span>
+        </div>
+
+        <div class="chart-container-wrapper">
+          <canvas id="riskDriversChartCanvas"></canvas>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==========================================================================
+         FUNCTION 7: CONSTRAINED REDISTRIBUTION ENGINE (OR-TOOLS GLOP SOLVER)
+         ========================================================================== -->
+    <section class="transfers-section-wrapper" id="section-transfers">
+      <article class="resilience-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <h2>Constrained Emergency Redistribution Engine</h2>
+            <div class="card-subtitle">Live Linear Program (OR-Tools GLOP) minimizing vulnerability-weighted unmet demand against Nearest-Donor greedy baseline</div>
+          </div>
+          <span class="provenance-badge badge-computed">Live Computed</span>
+        </div>
+
+        <!-- Comparative Summary Cards (OR-Tools GLOP vs Nearest Donor Baseline) -->
+        <div class="optimizer-comparison-grid">
+          
+          <!-- OR-Tools GLOP Optimal -->
+          <div class="optimizer-box highlight">
+            <div class="opt-box-header">
+              <span class="opt-box-title">Global Optimal Allocation (OR-Tools GLOP)</span>
+              <span class="improvement-badge-large" id="improvementBadgeText">+87.6% Advantage</span>
+            </div>
+            <div class="opt-stats-row">
+              <div class="opt-stat-col">
+                <span class="opt-stat-lbl">Unmet Demand</span>
+                <span class="opt-stat-num tabular-nums" id="optSummaryUnmet">--</span>
+              </div>
+              <div class="opt-stat-col">
+                <span class="opt-stat-lbl">Severe Shortages</span>
+                <span class="opt-stat-num tabular-nums" id="optSummaryShortages">--</span>
+              </div>
+              <div class="opt-stat-col">
+                <span class="opt-stat-lbl">Units Moved</span>
+                <span class="opt-stat-num tabular-nums" id="optSummaryMoved">--</span>
+              </div>
+              <div class="opt-stat-col">
+                <span class="opt-stat-lbl">Transit Burden</span>
+                <span class="opt-stat-num tabular-nums" id="optSummaryCost">--</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Greedy Baseline -->
+          <div class="optimizer-box">
+            <div class="opt-box-header">
+              <span class="opt-box-title" style="color: var(--ink-muted);">Nearest-Donor Greedy Baseline</span>
+              <span class="provenance-badge badge-synthetic">Benchmark Heuristic</span>
+            </div>
+            <div class="opt-stats-row">
+              <div class="opt-stat-col">
+                <span class="opt-stat-lbl">Unmet Demand</span>
+                <span class="opt-stat-num tabular-nums" style="color: var(--ink-muted);" id="baseSummaryUnmet">--</span>
+              </div>
+              <div class="opt-stat-col">
+                <span class="opt-stat-lbl">Severe Shortages</span>
+                <span class="opt-stat-num tabular-nums" style="color: var(--ink-muted);" id="baseSummaryShortages">--</span>
+              </div>
+              <div class="opt-stat-col">
+                <span class="opt-stat-lbl">Units Moved</span>
+                <span class="opt-stat-num tabular-nums" style="color: var(--ink-muted);" id="baseSummaryMoved">--</span>
+              </div>
+              <div class="opt-stat-col">
+                <span class="opt-stat-lbl">Transit Burden</span>
+                <span class="opt-stat-num tabular-nums" style="color: var(--ink-muted);" id="baseSummaryCost">--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transfer Manifest Table -->
+        <div class="resilience-table-wrapper">
+          <table class="resilience-table">
+            <thead>
+              <tr>
+                <th>Donor Facility (Surplus Hub)</th>
+                <th>Recipient Facility (Deficit Zone)</th>
+                <th>Medicine Formulary</th>
+                <th>Transfer Quantity</th>
+                <th>Transit Distance</th>
+              </tr>
+            </thead>
+            <tbody id="transfersTableBody">
+              <tr>
+                <td colspan="5" style="text-align: center; color: var(--ink-muted); padding: 24px;">Computing live linear program...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Constraints Statement -->
+        <div class="constraints-card-footer">
+          <span class="constraints-icon">🛡</span>
+          <span id="constraintsRespectedStatement">
+            Hard Constraints Enforced: Donor safety stock preserved (no donor dispatched below demand + safety buffer); route transit throughput capacities maintained; receiver warehouse storage limits respected; maximum operational radius cutoff ≤ 145 km.
+          </span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==========================================================================
+         FUNCTION 9: FEDERATED LEARNING & FUNCTION 10: MODEL PERFORMANCE
+         ========================================================================== -->
+    <section class="grid-analytics-two-col" id="section-federated">
+      
+      <!-- FUNCTION 9: FEDERATED LEARNING CONVERGENCE -->
+      <article class="resilience-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <h2>Federated Model Convergence</h2>
+            <div class="card-subtitle">Comparative Mean Absolute Error (MAE) across 25 federated aggregation rounds</div>
+          </div>
+          <span class="provenance-badge badge-synthetic">Model Benchmark / Synthetic Sample Data until CSV upload</span>
+        </div>
+
+        <div class="chart-container-wrapper">
+          <canvas id="federatedChartCanvas"></canvas>
+        </div>
+
+        <div style="margin-top: 14px; font-size: 0.8rem; color: var(--ink-muted); line-height: 1.5; background: var(--bg-card-subtle); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);">
+          <strong style="color: var(--ink-primary);">Privacy Architecture Note:</strong> Raw patient encounter records and localized district inventory logs never leave state/district health servers. Only differential model gradients are aggregated centrally.
+        </div>
+      </article>
+
+      <!-- FUNCTION 10: MODEL PERFORMANCE COMPARATIVE BENCHMARK -->
+      <article class="resilience-card">
+        <div class="card-header-row">
+          <div class="card-title-group">
+            <h2>Forecasting Model Benchmark</h2>
+            <div class="card-subtitle">Production architecture vs seasonal and moving average baselines</div>
+          </div>
+          <span class="provenance-badge badge-synthetic">Model Benchmark / Synthetic Sample Data until CSV upload</span>
+        </div>
+
+        <div class="resilience-table-wrapper">
+          <table class="resilience-table">
+            <thead>
+              <tr>
+                <th>Model Architecture</th>
+                <th>MAE (Units)</th>
+                <th>MASE Score</th>
+                <th>Performance Status</th>
+              </tr>
+            </thead>
+            <tbody id="modelPerformanceTableBody">
+              <tr>
+                <td colspan="4" style="text-align: center; color: var(--ink-muted); padding: 18px;">Loading benchmark evaluation metrics...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 14px; font-size: 0.78rem; color: var(--ink-muted); line-height: 1.4;">
+          * <em>MASE &lt; 1.0 indicates forecast accuracy superior to naive non-seasonal random-walk baseline.</em>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       NAVIGATION PATTERN: SLIM FLOATING DOCK (BOTTOM CENTER)
+       NO conventional sidebar, NO top bar.
+       ========================================================================== -->
+  <nav class="floating-dock-container" aria-label="Section Navigation">
+    <button class="dock-item-btn active" data-target="section-overview">
+      <span>Overview</span>
+    </button>
+    <button class="dock-item-btn" data-target="section-map">
+      <span>Spatial Map</span>
+    </button>
+    <button class="dock-item-btn" data-target="section-forecast">
+      <span>Forecast</span>
+    </button>
+    <button class="dock-item-btn" data-target="section-transfers">
+      <span>Transfers</span>
+    </button>
+    <button class="dock-item-btn" data-target="section-federated">
+      <span>Federated AI</span>
+    </button>
+    <div class="dock-divider"></div>
+    <button class="dock-command-btn" id="dockPaletteBtn" title="Open Context Selector (Press '/')">
+      <span>Search</span>
+      <span class="capsule-shortcut" style="background: rgba(255,255,255,0.15); color: #FFF; border-color: rgba(255,255,255,0.2);">/</span>
+    </button>
+  </nav>
+
+  <!-- ==========================================================================
+       COMMAND PALETTE / SEARCH-DRIVEN ENTRY POINT OVERLAY (MODAL)
+       ========================================================================== -->
+  <div class="palette-overlay-backdrop" id="paletteBackdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="palette-dialog">
+      <div class="palette-search-row">
+        <span class="palette-search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="paletteInput" 
+          class="palette-input" 
+          placeholder="Search State, District, Health Centre, Medicine, or Alert Scenario..."
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <span class="palette-esc-badge">ESC</span>
+      </div>
+
+      <div class="palette-tabs-nav">
+        <button class="palette-tab-btn active" data-tab="all">All Parameters</button>
+        <button class="palette-tab-btn" data-tab="phc">Health Centres (PHCs)</button>
+        <button class="palette-tab-btn" data-tab="medicine">Medicines</button>
+        <button class="palette-tab-btn" data-tab="scenario">Emergency Alerts</button>
+      </div>
+
+      <div class="palette-results-list" id="paletteResultsList">
+        <!-- Dynamically populated by app.js -->
+      </div>
+
+      <div class="palette-footer-hints">
+        <span>Use <kbd style="background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">↑</kbd> <kbd style="background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">↓</kbd> to navigate, <kbd style="background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">Enter</kbd> to select</span>
+        <span>Press <kbd style="background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">ESC</kbd> to dismiss</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDN Dependencies: Leaflet & Chart.js -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+  <!-- Application Modules -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

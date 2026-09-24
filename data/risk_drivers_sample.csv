@@ -1,0 +1,421 @@
+phc_id,medicine_id,feature,importance
+PHC_BORIGUMMA,ORS_ZINC,Inventory Run-Rate Coverage,0.389
+PHC_BORIGUMMA,ORS_ZINC,Emergency Surge Multiplier,0.258
+PHC_BORIGUMMA,ORS_ZINC,Supplier Resupply Lead-Time,0.143
+PHC_BORIGUMMA,ORS_ZINC,Monsoon Road Inundation Index,0.113
+PHC_BORIGUMMA,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.097
+PHC_BORIGUMMA,ARTESUNATE,Inventory Run-Rate Coverage,0.374
+PHC_BORIGUMMA,ARTESUNATE,Emergency Surge Multiplier,0.267
+PHC_BORIGUMMA,ARTESUNATE,Supplier Resupply Lead-Time,0.138
+PHC_BORIGUMMA,ARTESUNATE,Monsoon Road Inundation Index,0.119
+PHC_BORIGUMMA,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.102
+PHC_BORIGUMMA,AMOXICILLIN,Inventory Run-Rate Coverage,0.369
+PHC_BORIGUMMA,AMOXICILLIN,Emergency Surge Multiplier,0.266
+PHC_BORIGUMMA,AMOXICILLIN,Supplier Resupply Lead-Time,0.135
+PHC_BORIGUMMA,AMOXICILLIN,Monsoon Road Inundation Index,0.145
+PHC_BORIGUMMA,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.085
+PHC_BORIGUMMA,OXYTOCIN,Inventory Run-Rate Coverage,0.386
+PHC_BORIGUMMA,OXYTOCIN,Emergency Surge Multiplier,0.253
+PHC_BORIGUMMA,OXYTOCIN,Supplier Resupply Lead-Time,0.172
+PHC_BORIGUMMA,OXYTOCIN,Monsoon Road Inundation Index,0.13
+PHC_BORIGUMMA,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.059
+PHC_BORIGUMMA,RABIES_VACCINE,Inventory Run-Rate Coverage,0.391
+PHC_BORIGUMMA,RABIES_VACCINE,Emergency Surge Multiplier,0.271
+PHC_BORIGUMMA,RABIES_VACCINE,Supplier Resupply Lead-Time,0.15
+PHC_BORIGUMMA,RABIES_VACCINE,Monsoon Road Inundation Index,0.093
+PHC_BORIGUMMA,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.095
+PHC_BORIGUMMA,PARACETAMOL,Inventory Run-Rate Coverage,0.373
+PHC_BORIGUMMA,PARACETAMOL,Emergency Surge Multiplier,0.268
+PHC_BORIGUMMA,PARACETAMOL,Supplier Resupply Lead-Time,0.157
+PHC_BORIGUMMA,PARACETAMOL,Monsoon Road Inundation Index,0.104
+PHC_BORIGUMMA,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.098
+PHC_BORIGUMMA,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.395
+PHC_BORIGUMMA,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.236
+PHC_BORIGUMMA,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.158
+PHC_BORIGUMMA,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.109
+PHC_BORIGUMMA,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.102
+PHC_KOTPAD,ORS_ZINC,Inventory Run-Rate Coverage,0.362
+PHC_KOTPAD,ORS_ZINC,Emergency Surge Multiplier,0.27
+PHC_KOTPAD,ORS_ZINC,Supplier Resupply Lead-Time,0.173
+PHC_KOTPAD,ORS_ZINC,Monsoon Road Inundation Index,0.102
+PHC_KOTPAD,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.093
+PHC_KOTPAD,ARTESUNATE,Inventory Run-Rate Coverage,0.366
+PHC_KOTPAD,ARTESUNATE,Emergency Surge Multiplier,0.278
+PHC_KOTPAD,ARTESUNATE,Supplier Resupply Lead-Time,0.156
+PHC_KOTPAD,ARTESUNATE,Monsoon Road Inundation Index,0.135
+PHC_KOTPAD,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.065
+PHC_KOTPAD,AMOXICILLIN,Inventory Run-Rate Coverage,0.367
+PHC_KOTPAD,AMOXICILLIN,Emergency Surge Multiplier,0.265
+PHC_KOTPAD,AMOXICILLIN,Supplier Resupply Lead-Time,0.19
+PHC_KOTPAD,AMOXICILLIN,Monsoon Road Inundation Index,0.119
+PHC_KOTPAD,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.059
+PHC_KOTPAD,OXYTOCIN,Inventory Run-Rate Coverage,0.383
+PHC_KOTPAD,OXYTOCIN,Emergency Surge Multiplier,0.252
+PHC_KOTPAD,OXYTOCIN,Supplier Resupply Lead-Time,0.164
+PHC_KOTPAD,OXYTOCIN,Monsoon Road Inundation Index,0.123
+PHC_KOTPAD,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.078
+PHC_KOTPAD,RABIES_VACCINE,Inventory Run-Rate Coverage,0.38
+PHC_KOTPAD,RABIES_VACCINE,Emergency Surge Multiplier,0.249
+PHC_KOTPAD,RABIES_VACCINE,Supplier Resupply Lead-Time,0.177
+PHC_KOTPAD,RABIES_VACCINE,Monsoon Road Inundation Index,0.128
+PHC_KOTPAD,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.066
+PHC_KOTPAD,PARACETAMOL,Inventory Run-Rate Coverage,0.383
+PHC_KOTPAD,PARACETAMOL,Emergency Surge Multiplier,0.225
+PHC_KOTPAD,PARACETAMOL,Supplier Resupply Lead-Time,0.169
+PHC_KOTPAD,PARACETAMOL,Monsoon Road Inundation Index,0.128
+PHC_KOTPAD,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.095
+PHC_KOTPAD,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.354
+PHC_KOTPAD,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.257
+PHC_KOTPAD,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.171
+PHC_KOTPAD,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.142
+PHC_KOTPAD,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.076
+PHC_LAMTAPUT,ORS_ZINC,Inventory Run-Rate Coverage,0.345
+PHC_LAMTAPUT,ORS_ZINC,Emergency Surge Multiplier,0.254
+PHC_LAMTAPUT,ORS_ZINC,Supplier Resupply Lead-Time,0.162
+PHC_LAMTAPUT,ORS_ZINC,Monsoon Road Inundation Index,0.139
+PHC_LAMTAPUT,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.1
+PHC_LAMTAPUT,ARTESUNATE,Inventory Run-Rate Coverage,0.375
+PHC_LAMTAPUT,ARTESUNATE,Emergency Surge Multiplier,0.261
+PHC_LAMTAPUT,ARTESUNATE,Supplier Resupply Lead-Time,0.157
+PHC_LAMTAPUT,ARTESUNATE,Monsoon Road Inundation Index,0.133
+PHC_LAMTAPUT,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.074
+PHC_LAMTAPUT,AMOXICILLIN,Inventory Run-Rate Coverage,0.388
+PHC_LAMTAPUT,AMOXICILLIN,Emergency Surge Multiplier,0.238
+PHC_LAMTAPUT,AMOXICILLIN,Supplier Resupply Lead-Time,0.157
+PHC_LAMTAPUT,AMOXICILLIN,Monsoon Road Inundation Index,0.147
+PHC_LAMTAPUT,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.07
+PHC_LAMTAPUT,OXYTOCIN,Inventory Run-Rate Coverage,0.361
+PHC_LAMTAPUT,OXYTOCIN,Emergency Surge Multiplier,0.248
+PHC_LAMTAPUT,OXYTOCIN,Supplier Resupply Lead-Time,0.167
+PHC_LAMTAPUT,OXYTOCIN,Monsoon Road Inundation Index,0.13
+PHC_LAMTAPUT,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.094
+PHC_LAMTAPUT,RABIES_VACCINE,Inventory Run-Rate Coverage,0.361
+PHC_LAMTAPUT,RABIES_VACCINE,Emergency Surge Multiplier,0.241
+PHC_LAMTAPUT,RABIES_VACCINE,Supplier Resupply Lead-Time,0.168
+PHC_LAMTAPUT,RABIES_VACCINE,Monsoon Road Inundation Index,0.131
+PHC_LAMTAPUT,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.099
+PHC_LAMTAPUT,PARACETAMOL,Inventory Run-Rate Coverage,0.349
+PHC_LAMTAPUT,PARACETAMOL,Emergency Surge Multiplier,0.232
+PHC_LAMTAPUT,PARACETAMOL,Supplier Resupply Lead-Time,0.166
+PHC_LAMTAPUT,PARACETAMOL,Monsoon Road Inundation Index,0.144
+PHC_LAMTAPUT,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.109
+PHC_LAMTAPUT,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.387
+PHC_LAMTAPUT,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.252
+PHC_LAMTAPUT,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.134
+PHC_LAMTAPUT,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.126
+PHC_LAMTAPUT,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.101
+PHC_BISSAM_CUTTACK,ORS_ZINC,Inventory Run-Rate Coverage,0.367
+PHC_BISSAM_CUTTACK,ORS_ZINC,Emergency Surge Multiplier,0.266
+PHC_BISSAM_CUTTACK,ORS_ZINC,Supplier Resupply Lead-Time,0.18
+PHC_BISSAM_CUTTACK,ORS_ZINC,Monsoon Road Inundation Index,0.091
+PHC_BISSAM_CUTTACK,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.096
+PHC_BISSAM_CUTTACK,ARTESUNATE,Inventory Run-Rate Coverage,0.381
+PHC_BISSAM_CUTTACK,ARTESUNATE,Emergency Surge Multiplier,0.262
+PHC_BISSAM_CUTTACK,ARTESUNATE,Supplier Resupply Lead-Time,0.144
+PHC_BISSAM_CUTTACK,ARTESUNATE,Monsoon Road Inundation Index,0.126
+PHC_BISSAM_CUTTACK,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.087
+PHC_BISSAM_CUTTACK,AMOXICILLIN,Inventory Run-Rate Coverage,0.397
+PHC_BISSAM_CUTTACK,AMOXICILLIN,Emergency Surge Multiplier,0.24
+PHC_BISSAM_CUTTACK,AMOXICILLIN,Supplier Resupply Lead-Time,0.134
+PHC_BISSAM_CUTTACK,AMOXICILLIN,Monsoon Road Inundation Index,0.142
+PHC_BISSAM_CUTTACK,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.087
+PHC_BISSAM_CUTTACK,OXYTOCIN,Inventory Run-Rate Coverage,0.376
+PHC_BISSAM_CUTTACK,OXYTOCIN,Emergency Surge Multiplier,0.293
+PHC_BISSAM_CUTTACK,OXYTOCIN,Supplier Resupply Lead-Time,0.143
+PHC_BISSAM_CUTTACK,OXYTOCIN,Monsoon Road Inundation Index,0.121
+PHC_BISSAM_CUTTACK,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.067
+PHC_BISSAM_CUTTACK,RABIES_VACCINE,Inventory Run-Rate Coverage,0.361
+PHC_BISSAM_CUTTACK,RABIES_VACCINE,Emergency Surge Multiplier,0.229
+PHC_BISSAM_CUTTACK,RABIES_VACCINE,Supplier Resupply Lead-Time,0.177
+PHC_BISSAM_CUTTACK,RABIES_VACCINE,Monsoon Road Inundation Index,0.143
+PHC_BISSAM_CUTTACK,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.09
+PHC_BISSAM_CUTTACK,PARACETAMOL,Inventory Run-Rate Coverage,0.366
+PHC_BISSAM_CUTTACK,PARACETAMOL,Emergency Surge Multiplier,0.262
+PHC_BISSAM_CUTTACK,PARACETAMOL,Supplier Resupply Lead-Time,0.154
+PHC_BISSAM_CUTTACK,PARACETAMOL,Monsoon Road Inundation Index,0.128
+PHC_BISSAM_CUTTACK,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.09
+PHC_BISSAM_CUTTACK,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.385
+PHC_BISSAM_CUTTACK,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.251
+PHC_BISSAM_CUTTACK,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.185
+PHC_BISSAM_CUTTACK,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.104
+PHC_BISSAM_CUTTACK,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.075
+PHC_MUNIGUDA,ORS_ZINC,Inventory Run-Rate Coverage,0.371
+PHC_MUNIGUDA,ORS_ZINC,Emergency Surge Multiplier,0.239
+PHC_MUNIGUDA,ORS_ZINC,Supplier Resupply Lead-Time,0.161
+PHC_MUNIGUDA,ORS_ZINC,Monsoon Road Inundation Index,0.122
+PHC_MUNIGUDA,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.107
+PHC_MUNIGUDA,ARTESUNATE,Inventory Run-Rate Coverage,0.361
+PHC_MUNIGUDA,ARTESUNATE,Emergency Surge Multiplier,0.284
+PHC_MUNIGUDA,ARTESUNATE,Supplier Resupply Lead-Time,0.167
+PHC_MUNIGUDA,ARTESUNATE,Monsoon Road Inundation Index,0.105
+PHC_MUNIGUDA,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.083
+PHC_MUNIGUDA,AMOXICILLIN,Inventory Run-Rate Coverage,0.39
+PHC_MUNIGUDA,AMOXICILLIN,Emergency Surge Multiplier,0.273
+PHC_MUNIGUDA,AMOXICILLIN,Supplier Resupply Lead-Time,0.132
+PHC_MUNIGUDA,AMOXICILLIN,Monsoon Road Inundation Index,0.126
+PHC_MUNIGUDA,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.079
+PHC_MUNIGUDA,OXYTOCIN,Inventory Run-Rate Coverage,0.394
+PHC_MUNIGUDA,OXYTOCIN,Emergency Surge Multiplier,0.241
+PHC_MUNIGUDA,OXYTOCIN,Supplier Resupply Lead-Time,0.173
+PHC_MUNIGUDA,OXYTOCIN,Monsoon Road Inundation Index,0.123
+PHC_MUNIGUDA,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.069
+PHC_MUNIGUDA,RABIES_VACCINE,Inventory Run-Rate Coverage,0.37
+PHC_MUNIGUDA,RABIES_VACCINE,Emergency Surge Multiplier,0.255
+PHC_MUNIGUDA,RABIES_VACCINE,Supplier Resupply Lead-Time,0.163
+PHC_MUNIGUDA,RABIES_VACCINE,Monsoon Road Inundation Index,0.127
+PHC_MUNIGUDA,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.085
+PHC_MUNIGUDA,PARACETAMOL,Inventory Run-Rate Coverage,0.381
+PHC_MUNIGUDA,PARACETAMOL,Emergency Surge Multiplier,0.255
+PHC_MUNIGUDA,PARACETAMOL,Supplier Resupply Lead-Time,0.176
+PHC_MUNIGUDA,PARACETAMOL,Monsoon Road Inundation Index,0.123
+PHC_MUNIGUDA,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.065
+PHC_MUNIGUDA,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.384
+PHC_MUNIGUDA,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.271
+PHC_MUNIGUDA,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.178
+PHC_MUNIGUDA,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.098
+PHC_MUNIGUDA,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.069
+PHC_KALYANSINGHPUR,ORS_ZINC,Inventory Run-Rate Coverage,0.393
+PHC_KALYANSINGHPUR,ORS_ZINC,Emergency Surge Multiplier,0.24
+PHC_KALYANSINGHPUR,ORS_ZINC,Supplier Resupply Lead-Time,0.137
+PHC_KALYANSINGHPUR,ORS_ZINC,Monsoon Road Inundation Index,0.122
+PHC_KALYANSINGHPUR,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.108
+PHC_KALYANSINGHPUR,ARTESUNATE,Inventory Run-Rate Coverage,0.363
+PHC_KALYANSINGHPUR,ARTESUNATE,Emergency Surge Multiplier,0.271
+PHC_KALYANSINGHPUR,ARTESUNATE,Supplier Resupply Lead-Time,0.171
+PHC_KALYANSINGHPUR,ARTESUNATE,Monsoon Road Inundation Index,0.1
+PHC_KALYANSINGHPUR,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.095
+PHC_KALYANSINGHPUR,AMOXICILLIN,Inventory Run-Rate Coverage,0.379
+PHC_KALYANSINGHPUR,AMOXICILLIN,Emergency Surge Multiplier,0.279
+PHC_KALYANSINGHPUR,AMOXICILLIN,Supplier Resupply Lead-Time,0.175
+PHC_KALYANSINGHPUR,AMOXICILLIN,Monsoon Road Inundation Index,0.11
+PHC_KALYANSINGHPUR,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.057
+PHC_KALYANSINGHPUR,OXYTOCIN,Inventory Run-Rate Coverage,0.382
+PHC_KALYANSINGHPUR,OXYTOCIN,Emergency Surge Multiplier,0.223
+PHC_KALYANSINGHPUR,OXYTOCIN,Supplier Resupply Lead-Time,0.176
+PHC_KALYANSINGHPUR,OXYTOCIN,Monsoon Road Inundation Index,0.132
+PHC_KALYANSINGHPUR,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.087
+PHC_KALYANSINGHPUR,RABIES_VACCINE,Inventory Run-Rate Coverage,0.377
+PHC_KALYANSINGHPUR,RABIES_VACCINE,Emergency Surge Multiplier,0.266
+PHC_KALYANSINGHPUR,RABIES_VACCINE,Supplier Resupply Lead-Time,0.164
+PHC_KALYANSINGHPUR,RABIES_VACCINE,Monsoon Road Inundation Index,0.103
+PHC_KALYANSINGHPUR,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.09
+PHC_KALYANSINGHPUR,PARACETAMOL,Inventory Run-Rate Coverage,0.353
+PHC_KALYANSINGHPUR,PARACETAMOL,Emergency Surge Multiplier,0.265
+PHC_KALYANSINGHPUR,PARACETAMOL,Supplier Resupply Lead-Time,0.159
+PHC_KALYANSINGHPUR,PARACETAMOL,Monsoon Road Inundation Index,0.132
+PHC_KALYANSINGHPUR,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.091
+PHC_KALYANSINGHPUR,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.382
+PHC_KALYANSINGHPUR,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.276
+PHC_KALYANSINGHPUR,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.184
+PHC_KALYANSINGHPUR,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.095
+PHC_KALYANSINGHPUR,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.063
+PHC_BHAWANIPATNA,ORS_ZINC,Inventory Run-Rate Coverage,0.349
+PHC_BHAWANIPATNA,ORS_ZINC,Emergency Surge Multiplier,0.281
+PHC_BHAWANIPATNA,ORS_ZINC,Supplier Resupply Lead-Time,0.163
+PHC_BHAWANIPATNA,ORS_ZINC,Monsoon Road Inundation Index,0.144
+PHC_BHAWANIPATNA,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.063
+PHC_BHAWANIPATNA,ARTESUNATE,Inventory Run-Rate Coverage,0.355
+PHC_BHAWANIPATNA,ARTESUNATE,Emergency Surge Multiplier,0.279
+PHC_BHAWANIPATNA,ARTESUNATE,Supplier Resupply Lead-Time,0.184
+PHC_BHAWANIPATNA,ARTESUNATE,Monsoon Road Inundation Index,0.108
+PHC_BHAWANIPATNA,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.074
+PHC_BHAWANIPATNA,AMOXICILLIN,Inventory Run-Rate Coverage,0.37
+PHC_BHAWANIPATNA,AMOXICILLIN,Emergency Surge Multiplier,0.296
+PHC_BHAWANIPATNA,AMOXICILLIN,Supplier Resupply Lead-Time,0.153
+PHC_BHAWANIPATNA,AMOXICILLIN,Monsoon Road Inundation Index,0.123
+PHC_BHAWANIPATNA,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.058
+PHC_BHAWANIPATNA,OXYTOCIN,Inventory Run-Rate Coverage,0.394
+PHC_BHAWANIPATNA,OXYTOCIN,Emergency Surge Multiplier,0.233
+PHC_BHAWANIPATNA,OXYTOCIN,Supplier Resupply Lead-Time,0.154
+PHC_BHAWANIPATNA,OXYTOCIN,Monsoon Road Inundation Index,0.127
+PHC_BHAWANIPATNA,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.092
+PHC_BHAWANIPATNA,RABIES_VACCINE,Inventory Run-Rate Coverage,0.403
+PHC_BHAWANIPATNA,RABIES_VACCINE,Emergency Surge Multiplier,0.252
+PHC_BHAWANIPATNA,RABIES_VACCINE,Supplier Resupply Lead-Time,0.173
+PHC_BHAWANIPATNA,RABIES_VACCINE,Monsoon Road Inundation Index,0.098
+PHC_BHAWANIPATNA,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.074
+PHC_BHAWANIPATNA,PARACETAMOL,Inventory Run-Rate Coverage,0.367
+PHC_BHAWANIPATNA,PARACETAMOL,Emergency Surge Multiplier,0.268
+PHC_BHAWANIPATNA,PARACETAMOL,Supplier Resupply Lead-Time,0.159
+PHC_BHAWANIPATNA,PARACETAMOL,Monsoon Road Inundation Index,0.152
+PHC_BHAWANIPATNA,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.054
+PHC_BHAWANIPATNA,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.368
+PHC_BHAWANIPATNA,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.253
+PHC_BHAWANIPATNA,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.185
+PHC_BHAWANIPATNA,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.139
+PHC_BHAWANIPATNA,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.055
+PHC_DHARAMGARH,ORS_ZINC,Inventory Run-Rate Coverage,0.38
+PHC_DHARAMGARH,ORS_ZINC,Emergency Surge Multiplier,0.256
+PHC_DHARAMGARH,ORS_ZINC,Supplier Resupply Lead-Time,0.184
+PHC_DHARAMGARH,ORS_ZINC,Monsoon Road Inundation Index,0.108
+PHC_DHARAMGARH,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.072
+PHC_DHARAMGARH,ARTESUNATE,Inventory Run-Rate Coverage,0.366
+PHC_DHARAMGARH,ARTESUNATE,Emergency Surge Multiplier,0.241
+PHC_DHARAMGARH,ARTESUNATE,Supplier Resupply Lead-Time,0.183
+PHC_DHARAMGARH,ARTESUNATE,Monsoon Road Inundation Index,0.119
+PHC_DHARAMGARH,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.091
+PHC_DHARAMGARH,AMOXICILLIN,Inventory Run-Rate Coverage,0.394
+PHC_DHARAMGARH,AMOXICILLIN,Emergency Surge Multiplier,0.269
+PHC_DHARAMGARH,AMOXICILLIN,Supplier Resupply Lead-Time,0.133
+PHC_DHARAMGARH,AMOXICILLIN,Monsoon Road Inundation Index,0.139
+PHC_DHARAMGARH,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.065
+PHC_DHARAMGARH,OXYTOCIN,Inventory Run-Rate Coverage,0.375
+PHC_DHARAMGARH,OXYTOCIN,Emergency Surge Multiplier,0.277
+PHC_DHARAMGARH,OXYTOCIN,Supplier Resupply Lead-Time,0.141
+PHC_DHARAMGARH,OXYTOCIN,Monsoon Road Inundation Index,0.142
+PHC_DHARAMGARH,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.065
+PHC_DHARAMGARH,RABIES_VACCINE,Inventory Run-Rate Coverage,0.364
+PHC_DHARAMGARH,RABIES_VACCINE,Emergency Surge Multiplier,0.283
+PHC_DHARAMGARH,RABIES_VACCINE,Supplier Resupply Lead-Time,0.15
+PHC_DHARAMGARH,RABIES_VACCINE,Monsoon Road Inundation Index,0.099
+PHC_DHARAMGARH,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.104
+PHC_DHARAMGARH,PARACETAMOL,Inventory Run-Rate Coverage,0.374
+PHC_DHARAMGARH,PARACETAMOL,Emergency Surge Multiplier,0.302
+PHC_DHARAMGARH,PARACETAMOL,Supplier Resupply Lead-Time,0.149
+PHC_DHARAMGARH,PARACETAMOL,Monsoon Road Inundation Index,0.105
+PHC_DHARAMGARH,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.07
+PHC_DHARAMGARH,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.379
+PHC_DHARAMGARH,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.284
+PHC_DHARAMGARH,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.138
+PHC_DHARAMGARH,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.096
+PHC_DHARAMGARH,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.103
+PHC_THUAMUL_RAMPUR,ORS_ZINC,Inventory Run-Rate Coverage,0.387
+PHC_THUAMUL_RAMPUR,ORS_ZINC,Emergency Surge Multiplier,0.265
+PHC_THUAMUL_RAMPUR,ORS_ZINC,Supplier Resupply Lead-Time,0.149
+PHC_THUAMUL_RAMPUR,ORS_ZINC,Monsoon Road Inundation Index,0.099
+PHC_THUAMUL_RAMPUR,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.1
+PHC_THUAMUL_RAMPUR,ARTESUNATE,Inventory Run-Rate Coverage,0.37
+PHC_THUAMUL_RAMPUR,ARTESUNATE,Emergency Surge Multiplier,0.266
+PHC_THUAMUL_RAMPUR,ARTESUNATE,Supplier Resupply Lead-Time,0.154
+PHC_THUAMUL_RAMPUR,ARTESUNATE,Monsoon Road Inundation Index,0.132
+PHC_THUAMUL_RAMPUR,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.078
+PHC_THUAMUL_RAMPUR,AMOXICILLIN,Inventory Run-Rate Coverage,0.359
+PHC_THUAMUL_RAMPUR,AMOXICILLIN,Emergency Surge Multiplier,0.262
+PHC_THUAMUL_RAMPUR,AMOXICILLIN,Supplier Resupply Lead-Time,0.188
+PHC_THUAMUL_RAMPUR,AMOXICILLIN,Monsoon Road Inundation Index,0.093
+PHC_THUAMUL_RAMPUR,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.098
+PHC_THUAMUL_RAMPUR,OXYTOCIN,Inventory Run-Rate Coverage,0.393
+PHC_THUAMUL_RAMPUR,OXYTOCIN,Emergency Surge Multiplier,0.256
+PHC_THUAMUL_RAMPUR,OXYTOCIN,Supplier Resupply Lead-Time,0.154
+PHC_THUAMUL_RAMPUR,OXYTOCIN,Monsoon Road Inundation Index,0.145
+PHC_THUAMUL_RAMPUR,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.052
+PHC_THUAMUL_RAMPUR,RABIES_VACCINE,Inventory Run-Rate Coverage,0.368
+PHC_THUAMUL_RAMPUR,RABIES_VACCINE,Emergency Surge Multiplier,0.247
+PHC_THUAMUL_RAMPUR,RABIES_VACCINE,Supplier Resupply Lead-Time,0.167
+PHC_THUAMUL_RAMPUR,RABIES_VACCINE,Monsoon Road Inundation Index,0.116
+PHC_THUAMUL_RAMPUR,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.102
+PHC_THUAMUL_RAMPUR,PARACETAMOL,Inventory Run-Rate Coverage,0.386
+PHC_THUAMUL_RAMPUR,PARACETAMOL,Emergency Surge Multiplier,0.256
+PHC_THUAMUL_RAMPUR,PARACETAMOL,Supplier Resupply Lead-Time,0.182
+PHC_THUAMUL_RAMPUR,PARACETAMOL,Monsoon Road Inundation Index,0.103
+PHC_THUAMUL_RAMPUR,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.073
+PHC_THUAMUL_RAMPUR,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.376
+PHC_THUAMUL_RAMPUR,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.255
+PHC_THUAMUL_RAMPUR,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.145
+PHC_THUAMUL_RAMPUR,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.145
+PHC_THUAMUL_RAMPUR,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.079
+PHC_UMERKOTE,ORS_ZINC,Inventory Run-Rate Coverage,0.373
+PHC_UMERKOTE,ORS_ZINC,Emergency Surge Multiplier,0.263
+PHC_UMERKOTE,ORS_ZINC,Supplier Resupply Lead-Time,0.134
+PHC_UMERKOTE,ORS_ZINC,Monsoon Road Inundation Index,0.13
+PHC_UMERKOTE,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.1
+PHC_UMERKOTE,ARTESUNATE,Inventory Run-Rate Coverage,0.382
+PHC_UMERKOTE,ARTESUNATE,Emergency Surge Multiplier,0.271
+PHC_UMERKOTE,ARTESUNATE,Supplier Resupply Lead-Time,0.17
+PHC_UMERKOTE,ARTESUNATE,Monsoon Road Inundation Index,0.101
+PHC_UMERKOTE,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.076
+PHC_UMERKOTE,AMOXICILLIN,Inventory Run-Rate Coverage,0.386
+PHC_UMERKOTE,AMOXICILLIN,Emergency Surge Multiplier,0.266
+PHC_UMERKOTE,AMOXICILLIN,Supplier Resupply Lead-Time,0.167
+PHC_UMERKOTE,AMOXICILLIN,Monsoon Road Inundation Index,0.122
+PHC_UMERKOTE,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.059
+PHC_UMERKOTE,OXYTOCIN,Inventory Run-Rate Coverage,0.375
+PHC_UMERKOTE,OXYTOCIN,Emergency Surge Multiplier,0.269
+PHC_UMERKOTE,OXYTOCIN,Supplier Resupply Lead-Time,0.152
+PHC_UMERKOTE,OXYTOCIN,Monsoon Road Inundation Index,0.099
+PHC_UMERKOTE,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.105
+PHC_UMERKOTE,RABIES_VACCINE,Inventory Run-Rate Coverage,0.369
+PHC_UMERKOTE,RABIES_VACCINE,Emergency Surge Multiplier,0.292
+PHC_UMERKOTE,RABIES_VACCINE,Supplier Resupply Lead-Time,0.141
+PHC_UMERKOTE,RABIES_VACCINE,Monsoon Road Inundation Index,0.1
+PHC_UMERKOTE,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.098
+PHC_UMERKOTE,PARACETAMOL,Inventory Run-Rate Coverage,0.391
+PHC_UMERKOTE,PARACETAMOL,Emergency Surge Multiplier,0.258
+PHC_UMERKOTE,PARACETAMOL,Supplier Resupply Lead-Time,0.162
+PHC_UMERKOTE,PARACETAMOL,Monsoon Road Inundation Index,0.121
+PHC_UMERKOTE,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.068
+PHC_UMERKOTE,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.352
+PHC_UMERKOTE,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.247
+PHC_UMERKOTE,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.167
+PHC_UMERKOTE,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.133
+PHC_UMERKOTE,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.101
+PHC_PAPADAHANDI,ORS_ZINC,Inventory Run-Rate Coverage,0.377
+PHC_PAPADAHANDI,ORS_ZINC,Emergency Surge Multiplier,0.276
+PHC_PAPADAHANDI,ORS_ZINC,Supplier Resupply Lead-Time,0.159
+PHC_PAPADAHANDI,ORS_ZINC,Monsoon Road Inundation Index,0.107
+PHC_PAPADAHANDI,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.081
+PHC_PAPADAHANDI,ARTESUNATE,Inventory Run-Rate Coverage,0.373
+PHC_PAPADAHANDI,ARTESUNATE,Emergency Surge Multiplier,0.277
+PHC_PAPADAHANDI,ARTESUNATE,Supplier Resupply Lead-Time,0.147
+PHC_PAPADAHANDI,ARTESUNATE,Monsoon Road Inundation Index,0.099
+PHC_PAPADAHANDI,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.104
+PHC_PAPADAHANDI,AMOXICILLIN,Inventory Run-Rate Coverage,0.354
+PHC_PAPADAHANDI,AMOXICILLIN,Emergency Surge Multiplier,0.262
+PHC_PAPADAHANDI,AMOXICILLIN,Supplier Resupply Lead-Time,0.156
+PHC_PAPADAHANDI,AMOXICILLIN,Monsoon Road Inundation Index,0.132
+PHC_PAPADAHANDI,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.096
+PHC_PAPADAHANDI,OXYTOCIN,Inventory Run-Rate Coverage,0.395
+PHC_PAPADAHANDI,OXYTOCIN,Emergency Surge Multiplier,0.27
+PHC_PAPADAHANDI,OXYTOCIN,Supplier Resupply Lead-Time,0.161
+PHC_PAPADAHANDI,OXYTOCIN,Monsoon Road Inundation Index,0.124
+PHC_PAPADAHANDI,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.05
+PHC_PAPADAHANDI,RABIES_VACCINE,Inventory Run-Rate Coverage,0.396
+PHC_PAPADAHANDI,RABIES_VACCINE,Emergency Surge Multiplier,0.273
+PHC_PAPADAHANDI,RABIES_VACCINE,Supplier Resupply Lead-Time,0.143
+PHC_PAPADAHANDI,RABIES_VACCINE,Monsoon Road Inundation Index,0.098
+PHC_PAPADAHANDI,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.09
+PHC_PAPADAHANDI,PARACETAMOL,Inventory Run-Rate Coverage,0.377
+PHC_PAPADAHANDI,PARACETAMOL,Emergency Surge Multiplier,0.257
+PHC_PAPADAHANDI,PARACETAMOL,Supplier Resupply Lead-Time,0.134
+PHC_PAPADAHANDI,PARACETAMOL,Monsoon Road Inundation Index,0.146
+PHC_PAPADAHANDI,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.086
+PHC_PAPADAHANDI,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.386
+PHC_PAPADAHANDI,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.247
+PHC_PAPADAHANDI,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.174
+PHC_PAPADAHANDI,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.095
+PHC_PAPADAHANDI,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.098
+PHC_JHARIGAON,ORS_ZINC,Inventory Run-Rate Coverage,0.373
+PHC_JHARIGAON,ORS_ZINC,Emergency Surge Multiplier,0.262
+PHC_JHARIGAON,ORS_ZINC,Supplier Resupply Lead-Time,0.154
+PHC_JHARIGAON,ORS_ZINC,Monsoon Road Inundation Index,0.115
+PHC_JHARIGAON,ORS_ZINC,Weekly Outpatient Footfall Velocity,0.096
+PHC_JHARIGAON,ARTESUNATE,Inventory Run-Rate Coverage,0.419
+PHC_JHARIGAON,ARTESUNATE,Emergency Surge Multiplier,0.278
+PHC_JHARIGAON,ARTESUNATE,Supplier Resupply Lead-Time,0.142
+PHC_JHARIGAON,ARTESUNATE,Monsoon Road Inundation Index,0.098
+PHC_JHARIGAON,ARTESUNATE,Weekly Outpatient Footfall Velocity,0.063
+PHC_JHARIGAON,AMOXICILLIN,Inventory Run-Rate Coverage,0.383
+PHC_JHARIGAON,AMOXICILLIN,Emergency Surge Multiplier,0.267
+PHC_JHARIGAON,AMOXICILLIN,Supplier Resupply Lead-Time,0.144
+PHC_JHARIGAON,AMOXICILLIN,Monsoon Road Inundation Index,0.128
+PHC_JHARIGAON,AMOXICILLIN,Weekly Outpatient Footfall Velocity,0.078
+PHC_JHARIGAON,OXYTOCIN,Inventory Run-Rate Coverage,0.387
+PHC_JHARIGAON,OXYTOCIN,Emergency Surge Multiplier,0.254
+PHC_JHARIGAON,OXYTOCIN,Supplier Resupply Lead-Time,0.181
+PHC_JHARIGAON,OXYTOCIN,Monsoon Road Inundation Index,0.1
+PHC_JHARIGAON,OXYTOCIN,Weekly Outpatient Footfall Velocity,0.078
+PHC_JHARIGAON,RABIES_VACCINE,Inventory Run-Rate Coverage,0.374
+PHC_JHARIGAON,RABIES_VACCINE,Emergency Surge Multiplier,0.276
+PHC_JHARIGAON,RABIES_VACCINE,Supplier Resupply Lead-Time,0.163
+PHC_JHARIGAON,RABIES_VACCINE,Monsoon Road Inundation Index,0.133
+PHC_JHARIGAON,RABIES_VACCINE,Weekly Outpatient Footfall Velocity,0.054
+PHC_JHARIGAON,PARACETAMOL,Inventory Run-Rate Coverage,0.396
+PHC_JHARIGAON,PARACETAMOL,Emergency Surge Multiplier,0.283
+PHC_JHARIGAON,PARACETAMOL,Supplier Resupply Lead-Time,0.139
+PHC_JHARIGAON,PARACETAMOL,Monsoon Road Inundation Index,0.115
+PHC_JHARIGAON,PARACETAMOL,Weekly Outpatient Footfall Velocity,0.067
+PHC_JHARIGAON,SNAKE_ANTIVENOM,Inventory Run-Rate Coverage,0.383
+PHC_JHARIGAON,SNAKE_ANTIVENOM,Emergency Surge Multiplier,0.261
+PHC_JHARIGAON,SNAKE_ANTIVENOM,Supplier Resupply Lead-Time,0.159
+PHC_JHARIGAON,SNAKE_ANTIVENOM,Monsoon Road Inundation Index,0.096
+PHC_JHARIGAON,SNAKE_ANTIVENOM,Weekly Outpatient Footfall Velocity,0.101

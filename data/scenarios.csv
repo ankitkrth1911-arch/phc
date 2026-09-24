@@ -1,0 +1,6 @@
+scenario_id,name,description,demand_multiplier,affected_districts,affected_medicines
+BASELINE,Normal Operational Baseline,Standard seasonal consumption with routine supply cycles and no active disaster alerts.,1.0,ALL,ALL
+MONSOON_FLOOD,Monsoon Flooding & Waterborne Surge,"Severe cloudburst causing Flash floods in Rayagada and Kalahandi river basins. Unprecedented surge in diarrheal cases, snakebites, and secondary bacterial infections.",2.9,"DIST_RAYAGADA,DIST_KALAHANDI,DIST_KORAPUT","ORS_ZINC,SNAKE_ANTIVENOM,AMOXICILLIN"
+MALARIA_EPIDEMIC,Post-Monsoon Vector Outbreak,Stagnant floodwater accelerates Anopheles breeding in forested tribal belts. Acute surge in falciparum malaria and hyperpyrexia.,2.5,"DIST_RAYAGADA,DIST_KORAPUT,DIST_NABARANGPUR","ARTESUNATE,PARACETAMOL"
+HEATWAVE_SURGE,Pre-Monsoon Extreme Heat Emergency,"Peak summer temperatures exceeding 45.8°C across Kalahandi and Nabarangpur plains, causing severe dehydration and heatstroke.",2.2,"DIST_KALAHANDI,DIST_NABARANGPUR","ORS_ZINC,PARACETAMOL"
+RESPIRATORY_SPIKE,Winter Viral Respiratory Cluster,Cold spell in high-altitude Lamtaput and Thuamul Rampur ridges triggering acute bronchiolitis and secondary pneumonia.,2.4,"DIST_KORAPUT,DIST_KALAHANDI","AMOXICILLIN,PARACETAMOL"

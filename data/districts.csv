@@ -1,0 +1,13 @@
+state,district_id,phc_id,phc_name,lat,lon,vulnerability_weight,receiver_capacity
+Odisha,DIST_KORAPUT,PHC_BORIGUMMA,Borigumma Sub-District Hospital,18.966,82.556,1.2,6500
+Odisha,DIST_KORAPUT,PHC_KOTPAD,Kotpad Block PHC,19.141,82.327,1.4,4200
+Odisha,DIST_KORAPUT,PHC_LAMTAPUT,Lamtaput High-Altitude PHC,18.665,82.684,1.65,3200
+Odisha,DIST_RAYAGADA,PHC_BISSAM_CUTTACK,Bissam Cuttack Community Health Centre,19.516,83.518,1.25,5800
+Odisha,DIST_RAYAGADA,PHC_MUNIGUDA,Muniguda Rural Centre,19.627,83.488,1.45,3800
+Odisha,DIST_RAYAGADA,PHC_KALYANSINGHPUR,Kalyansinghpur Tribal Valley PHC,19.349,83.332,1.7,3100
+Odisha,DIST_KALAHANDI,PHC_BHAWANIPATNA,Bhawanipatna Central Reserve PHC,19.907,83.164,1.1,8000
+Odisha,DIST_KALAHANDI,PHC_DHARAMGARH,Dharamgarh Model Health Unit,19.866,82.778,1.2,6000
+Odisha,DIST_KALAHANDI,PHC_THUAMUL_RAMPUR,Thuamul Rampur Remote Ridge PHC,19.578,82.998,1.85,2800
+Odisha,DIST_NABARANGPUR,PHC_UMERKOTE,Umerkote Sub-Divisional PHC,19.67,82.208,1.15,6200
+Odisha,DIST_NABARANGPUR,PHC_PAPADAHANDI,Papadahandi Riverbank PHC,19.383,82.597,1.35,4100
+Odisha,DIST_NABARANGPUR,PHC_JHARIGAON,Jharigaon Forest Border PHC,19.821,82.389,1.75,3000

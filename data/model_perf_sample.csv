@@ -1,0 +1,7 @@
+model,MAE,MASE
+Fed-Ensemble Temporal Model (Ours),4.18,0.62
+Centralized LSTM-Quantile,3.92,0.58
+District Ridge Autoregressive,6.84,1.02
+Prophet with Monsoon Holiday Regressors,7.45,1.11
+4-Week Rolling Moving Average,8.92,1.31
+Naive Seasonal Baseline (Last Year),11.45,1.68
