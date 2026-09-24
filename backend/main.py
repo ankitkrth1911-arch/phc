@@ -282,3 +282,8 @@ if FRONTEND_DIR.exists():
     def serve_frontend_index():
         return FileResponse(FRONTEND_DIR / "index.html")
 
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", config.PORT))
+    uvicorn.run("backend.main:app", host="0.0.0.0", port=port, reload=False)
+

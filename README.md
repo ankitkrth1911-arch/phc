@@ -91,7 +91,50 @@ Then visit `http://localhost:3000/`. Full CORS support is enabled on the backend
 
 ---
 
-## 5. Provenance of Data: Live Computed vs. Benchmark Sample Data
+## 5. Deploying on Render (render.com)
+
+You can deploy the entire application on Render using either **Blueprint (`render.yaml`)** or **Manual Web Service setup**.
+
+### Method A: Automated Blueprint Deployment (Recommended)
+1. Push your repository to GitHub.
+2. In the [Render Dashboard](https://dashboard.render.com/), click **New +** → **Blueprint**.
+3. Select your repository `ankitkrth1911-arch/phc`.
+4. Render automatically reads [`render.yaml`](file:///e:/PHC/pro/render.yaml) and configures:
+   - **Runtime:** `Python`
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
+5. Under Environment Variables, enter your `GEMINI_API_KEY` (or leave blank to use the grounded fallback template).
+6. Click **Apply**.
+
+---
+
+### Method B: Manual Web Service Setup
+If creating the Web Service manually from the dashboard:
+- **Service Type:** Web Service
+- **Name:** `phc-supply-resilience`
+- **Root Directory:** *(leave blank — uses repository root)*
+- **Runtime:** `Python 3`
+- **Build Command:** `pip install -r requirements.txt`
+- **Start Command:** `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
+- **Environment Variables (under Advanced / Environment):**
+  - `PYTHON_VERSION`: `3.11.9` (recommended for pre-compiled OR-Tools Linux wheels)
+  - `GEMINI_API_KEY`: *(your Gemini API key)*
+
+---
+
+### Frontend Deployment: All-in-One vs. Static Site
+- **All-in-One (Default & Recommended):** The FastAPI backend in [`backend/main.py`](file:///e:/PHC/pro/backend/main.py) automatically serves the single-page application at the root path (`/`). Visiting your Render Web Service URL (e.g. `https://phc-supply-resilience.onrender.com/`) immediately serves the complete UI with zero cross-origin configuration needed.
+- **Separate Static Site Service:** If you prefer hosting the frontend as a dedicated Render **Static Site**:
+  - **Service Type:** Static Site
+  - **Root Directory:** *(leave blank)*
+  - **Build Command:** *(leave empty)*
+  - **Publish Directory:** `frontend`
+  - In [`frontend/js/api.js`](file:///e:/PHC/pro/frontend/js/api.js#L6), update `API_BASE` with your backend URL.
+  - In [`backend/main.py`](file:///e:/PHC/pro/backend/main.py#L39), update `allow_origins` to whitelist your frontend URL.
+
+---
+
+## 6. Provenance of Data: Live Computed vs. Benchmark Sample Data
 
 Every section in the UI includes a clear provenance badge identifying how its values are derived:
 

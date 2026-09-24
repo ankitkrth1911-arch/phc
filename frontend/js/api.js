@@ -3,9 +3,9 @@
  * Connects to FastAPI backend with automatic offline fallback to realistic sample data.
  */
 
-const API_BASE = window.location.port === "8000" 
-  ? "" 
-  : "http://localhost:8000";
+const API_BASE = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
+  ? (window.location.port === "8000" ? "" : "http://localhost:8000")
+  : "";
 
 let isBackendLive = false;
 
